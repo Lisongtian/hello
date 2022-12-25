@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>佘颖欣要永远都开心哦</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url(./img/3.jpg) no-repeat -120px -17px;
+        }
+
+        .syx {
+            position: relative;
+            /* margin-top: 50px;
+            top: 50px; */
+            width: 375px;
+            height: 117px;
+            /* background-color: pink; */
+        }
+
+        li {
+            /* display: none; */
+            position: absolute;
+            list-style: none;
+            top: 20px;
+            width: 81px;
+            height: 81px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+            color: #d0ad76;
+            font-size: 72px;
+            line-height: 81px;
+            text-align: center;
+            /* opacity: .3; */
+        }
+
+        .bits {
+            left: 33px;
+        }
+
+        .tenths {
+            left: 147px;
+        }
+
+        .hundredths {
+            right: 33px;
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        span {
+            position: absolute;
+            display: block;
+            left: 124px;
+            top: 90px;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            background-color: #d0ad76;
+        }
+
+        .open {
+            position: relative;
+            top: 178px;
+            left: 140px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background: url(./img/2.png) no-repeat -162px -151px/428px 420px;
+            /* background-image: url(./img/2.png);
+            background-repeat: no-repeat;
+            background-position: -162px -151px;
+            background-size: 428px 420px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="syx">
+        <img src="./img/1.png" alt="">
+        <span></span>
+        <li class="bits"></li>
+        <li class="tenths"></li>
+        <li class="hundredths"></li>
+    </div>
+    <div class="open"></div>
+    <script>
+        var bits = document.querySelector('.bits');
+        var tenths = document.querySelector('.tenths');
+        var hundredths = document.querySelector('.hundredths');
+        var open = document.querySelector('.open');
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+        }
+        function getMy() {
+            var one = getRandomInt(0, 10);
+            var two = getRandomInt(0, 10);
+            var three = getRandomInt(0, 10);
+            bits.innerHTML = one;
+            tenths.innerHTML = two;
+            hundredths.innerHTML = three;
+        }
+        open.addEventListener('click', function () {
+            getMy();
+        })
+
+
+        // console.log(one, two, three);
+    </script>
+</body>
+
+</html>
